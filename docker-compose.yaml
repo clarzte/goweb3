@@ -1,0 +1,47 @@
+version: "3.4"
+services:
+  # truffle:
+  #   build:
+  #     context: .
+  #     target: truffle
+  #   depends_on:
+  #     - ganache
+  #   networks:
+  #     - backend
+  #   volumes:
+  #     - .:/home/app
+  #     - /home/app/node_modules
+  # ganache:
+  #   build:
+  #     context: .
+  #     target: ganache
+  #   ports:
+  #     - 8545:8545
+  #   networks:
+  #     - backend
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data_container:/data/db
+  # mongo-express:
+  #   container_name: mongo-express
+  #   image: mongo-express:latest
+  #   restart: always
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: secret
+  #     ME_CONFIG_MONGODB_SERVER: mongodb
+  #   ports:
+  #     - "8081:8081"
+  #   depends_on:
+  #     - mongodb
+
+volumes:
+  mongodb_data_container:

@@ -1,0 +1,11 @@
+.git
+.gitignore
+.vscode
+.env
+docker-compose.yaml
+Makefile
+README.md
+*.bin
+.github
+/build
+/bin

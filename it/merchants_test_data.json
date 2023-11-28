@@ -1,0 +1,34 @@
+{
+  "merchantAddress": "0x1234567890123456789012345678901234567890",
+  "name": "jumbo",
+  "street": "Main St.",
+  "number": "10A",
+  "postcode": "12345",
+  "country": "Testland",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      4.873455,
+      52.3791
+    ]
+  },
+  "description": "Your local shop",
+  "arweaveID": "abc"
+}
+{
+  "merchantAddress": "0x1224567890123456789012345678901234567890",
+  "name": "coffeeshop",
+  "street": "Main St.",
+  "number": "10A",
+  "postcode": "12345",
+  "country": "Testland",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      22,
+      19.96
+    ]
+  },
+  "description": "The best warm drinks in town!",
+  "arweaveID": "def"
+}
